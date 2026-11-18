@@ -1,22 +1,22 @@
-# ANATOMIA – Inclusive Health & Well-being Platform
+# ANATOMIA – Plateforme de santé et de bien-être inclusif
 
 ## Overview
 
-ANATOMIA is a web platform focused on inclusive health and well-being.
+ANATOMIA est une plateforme web dédiée à la santé et au bien-être inclusif.
 
-This project is developed as part of the PIDEV program at **Esprit School of Engineering – Tunisia**, Class 2A12, during the academic year 2026–2027.
+Ce projet est réalisé dans le cadre du programme PIDEV à **Esprit School of Engineering – Tunisia**, classe 2A12, durant l'année universitaire 2026–2027.
 
-The platform provides users with health and anatomy information, healthy recipes, medical services, and a community space.
+La plateforme permet aux utilisateurs d'accéder à des informations sur l'anatomie humaine, de découvrir des recettes saines, de rechercher des services médicaux et de participer à une communauté dédiée à la santé.
 
 ## Features
 
-- **Human Body:** Detailed male and female anatomy information and body-part descriptions.
-- **Recipes:** Healthy recipes, herbal teas, filters, and personalization.
-- **Users:** User registration, profiles, doctor search, and favorites.
-- **Free Forum & Community Hosting:** Discussions, posts, and comments.
-- **Health Articles:** Health blog and categorized articles.
-- **Healthy Map & Services:** Interactive map to locate healthy restaurants and pharmacies, discover establishments, and request healthy meals.
-- **Medical Appointments:** Doctor selection, availability, booking, modification, and cancellation of appointments.
+- **Corps humain :** Présentation détaillée de l'anatomie masculine et féminine avec des fiches explicatives par zone du corps.
+- **Recettes :** Consultation de recettes saines et de tisanes, avec filtres et personnalisation.
+- **Utilisateurs :** Création de compte, gestion du profil, recherche de médecins et gestion des favoris.
+- **Free Forum & Community Hosting :** Espace communautaire permettant de publier des discussions, des publications et des commentaires.
+- **Articles santé :** Blog consacré à la santé avec des articles organisés par catégories.
+- **Healthy Map & Services :** Carte interactive permettant de localiser les restaurants proposant des repas sains et les pharmacies, de consulter leurs informations et de demander des repas sains.
+- **Rendez-vous :** Gestion des rendez-vous médicaux, choix du médecin, consultation des disponibilités, réservation, modification et annulation.
 
 ## Tech Stack
 
@@ -26,20 +26,21 @@ The platform provides users with health and anatomy information, healthy recipes
 - JavaScript
 
 ### Backend
-- To be confirmed by the project team.
+- À compléter selon les technologies choisies par l'équipe.
 
 ## Architecture
 
-The application follows the **MVC (Model-View-Controller)** architecture:
+Le projet adopte l'architecture **MVC (Model-View-Controller)** :
 
-- **Model:** Manages application data and database interactions.
-- **View:** Displays the user interface and HTML pages.
-- **Controller:** Handles user requests and connects Models with Views.
+- **Model :** Gestion des données et des interactions avec la base de données.
+- **View :** Affichage des interfaces utilisateur et des pages HTML.
+- **Controller :** Gestion des requêtes et communication entre les Models et les Views.
 
 ## Contributors
 
-**Team:** Brainwave  
-**Class:** 2A12
+**Équipe :** Brainwave  
+**Classe :** 2A12
+
 
 - Feryel Argoubi
 - Emna Khelifi
@@ -50,21 +51,22 @@ The application follows the **MVC (Model-View-Controller)** architecture:
 
 ## Academic Context
 
-Developed at **Esprit School of Engineering – Tunisia**.
+Développé à **Esprit School of Engineering – Tunisia**.
 
-PIDEV – Class 2A12  
-Academic Year: 2026–2027
+Programme : PIDEV  
+Classe : 2A12  
+Année universitaire : 2026–2027
 
 ## Getting Started
 
-1. Clone the repository:
+1. Cloner le dépôt :
    ```bash
-   git clone ...
+   git clone URL
    ```
-2. Open the project folder.
-3. Follow the project setup instructions provided by the team.
-4. Run the application according to the selected backend and development environment.
+2. Ouvrir le dossier du projet.
+3. Installer et configurer les dépendances nécessaires selon les technologies utilisées.
+4. Lancer l'application selon les instructions de l'équipe.
 
 ## Acknowledgments
 
-We would like to thank **Esprit School of Engineering**, our supervisors, and our tutors for their guidance and support throughout this academic project.
+Nous remercions **Esprit School of Engineering**, nos encadrants et nos tuteurs pour leur accompagnement et leurs conseils tout au long de ce projet.
