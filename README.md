@@ -59,7 +59,7 @@ Academic Year: 2026–2027
 
 1. Clone the repository:
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone ...
    ```
 2. Open the project folder.
 3. Follow the project setup instructions provided by the team.
