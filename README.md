@@ -81,15 +81,6 @@ http://localhost/ANATOMIA
 http://localhost/phpmyadmin
 ```
 
-## Fonctionnalités
-
-## Technologies utilisées
-
-## Contributions
-
-## Licence
-
-
 ## Contributions
 
 Nous remercions tous ceux qui ont contribué à ce projet !
