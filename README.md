@@ -1,6 +1,3 @@
-
-
-
 # ANATOMIA – Plateforme de santé et de bien-être inclusif
 
 ## Description
@@ -133,27 +130,3 @@ La licence de ce projet sera définie par l'équipe selon les conditions de dist
 
 
 
-
-## Mots-clés
-
-- Anatomie humaine
-- Santé et bien-être
-- Gestion des utilisateurs
-- Gestion des métiers
-- Gestion des recettes
-- Gestion des services médicaux
-- Gestion des rendez-vous médicaux
-- Gestion des favoris
-- Forum communautaire
-- Articles santé
-- Carte interactive
-- Pharmacies
-- Restaurants sains
-- PHP
-- MySQL
-- HTML
-- CSS
-- JavaScript
-- Architecture MVC
-- Git
-- GitHub
