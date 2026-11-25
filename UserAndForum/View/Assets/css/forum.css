@@ -1,0 +1,850 @@
+
+/* ==========================================
+   ANATOMIA - FORUM
+   Template Front Office
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap');
+
+:root {
+    --cream: #FBF1E8;
+    --white: #FFFFFF;
+    --dark: #2B1B17;
+    --green: #3E6B4F;
+    --green-light: #E5F0E6;
+    --red: #A8322A;
+    --coral: #E8806F;
+    --text: #51433D;
+    --muted: #786D68;
+    --border: #E5D6CA;
+    --shadow: 0 8px 25px rgba(43, 27, 23, 0.07);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header,
+.site-header {
+    min-height: 85px;
+    width: 100%;
+    background: var(--white);
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 2px 12px rgba(43, 27, 23, 0.05);
+}
+
+.logo img {
+    width: 145px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.navigation a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--red);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.header-icons a {
+    color: var(--green);
+    font-size: 19px;
+    transition: color 0.3s;
+}
+
+.header-icons a:hover {
+    color: var(--red);
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    width: 86%;
+    margin: 40px auto;
+    padding: 65px 50px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    color: var(--coral);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    margin: 15px 0;
+    color: var(--white);
+}
+
+.hero-description {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: var(--coral);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: var(--red);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   COMMUNITY
+========================================== */
+
+.community {
+    width: min(1100px, 90%);
+    margin: 50px auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--dark);
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* ==========================================
+   NOTIFICATIONS
+========================================== */
+
+.notice {
+    background: var(--green-light);
+    color: var(--green);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--green);
+}
+
+.notice-error {
+    background: #F8E8E6;
+    color: var(--red);
+    border-left-color: var(--red);
+}
+
+.nav-toggle {
+    display: none;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--dark);
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-weight: 600;
+}
+
+.badge-role {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-grid .full {
+    grid-column: 1 / -1;
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 24px;
+}
+
+.js-errors {
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #FFFCF9;
+}
+
+.profile-card,
+.auth-card {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.field-error,
+.js-errors p {
+    color: var(--red);
+    margin: 0 0 12px;
+}
+
+.inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.inline-actions a,
+.link-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: var(--green);
+    color: white;
+    font-weight: 600;
+}
+
+.ghost-button {
+    background: transparent;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+
+.empty-message {
+    background: #FFFDF9;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* ==========================================
+   CREATE PUBLICATION
+========================================== */
+
+.create-post {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    margin: 30px 0 40px;
+}
+
+.create-post form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.create-post input,
+.create-post textarea,
+.create-post select,
+.form-grid select {
+    width: 100%;
+    padding: 14px 16px;
+    background: #FFFCF9;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+}
+
+.create-post textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(62, 107, 79, 0.1);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button[type="submit"] {
+    border: none;
+    border-radius: 25px;
+    padding: 11px 22px;
+    font-weight: 600;
+    background: var(--green);
+    color: var(--white);
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: var(--red);
+}
+
+.publish-button {
+    align-self: flex-start;
+}
+
+/* ==========================================
+   POSTS SECTION
+========================================== */
+
+.posts-section {
+    margin: 35px 0 60px;
+}
+
+.posts-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.posts-heading p {
+    color: var(--muted);
+}
+
+.posts-heading span {
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* PUBLICATION CARD */
+
+.post-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 27px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    box-shadow: 0 12px 30px rgba(43, 27, 23, 0.1);
+}
+
+/* POST HEADER */
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.user-info h4 {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.user-info span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* POST BODY */
+
+.post-body {
+    padding-bottom: 15px;
+}
+
+.post-body h3 {
+    margin-bottom: 12px;
+}
+
+.post-body p {
+    color: var(--text);
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+/* ==========================================
+   EDIT PUBLICATION
+========================================== */
+
+.edit-section {
+    margin-top: 18px;
+    padding: 15px 0;
+    border-top: 1px solid var(--border);
+}
+
+.edit-section summary {
+    cursor: pointer;
+    color: var(--green);
+    font-weight: 600;
+    font-size: 14px;
+    list-style-position: inside;
+    transition: color 0.3s;
+}
+
+.edit-section summary:hover {
+    color: var(--red);
+}
+
+.edit-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.edit-section input,
+.edit-section textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #FFFCF9;
+    outline: none;
+}
+
+.edit-section textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.edit-section button {
+    align-self: flex-start;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 25px;
+    background: var(--green);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit-section button:hover {
+    background: #2d523b;
+}
+
+/* ==========================================
+   DELETE PUBLICATION
+========================================== */
+
+.delete-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.delete-form input {
+    width: 100%;
+    max-width: 350px;
+    padding: 11px 13px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+}
+
+.delete-button {
+    align-self: flex-start;
+    background: var(--red) !important;
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 19px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.delete-button:hover {
+    background: #81251F !important;
+}
+
+/* ==========================================
+   POST ACTIONS
+========================================== */
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.post-actions form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.post-actions input,
+.comments-section input,
+.comments-section textarea,
+.report-section input,
+.report-section textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    max-width: 100%;
+}
+
+.post-actions button,
+.comment-toggle,
+.comments-section button,
+.report-section button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--green);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-actions button:hover,
+.comment-toggle:hover,
+.comments-section button:hover,
+.report-section button:hover {
+    background: var(--red);
+}
+
+/* ==========================================
+   COMMENTS
+========================================== */
+
+.comments-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.comments-section h4 {
+    margin-bottom: 15px;
+    color: var(--green);
+}
+
+.comment-item {
+    background: #FFFCF9;
+    padding: 13px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+.comment-item strong {
+    color: var(--dark);
+}
+
+.comment-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.comment-form input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.comment-form button {
+    align-self: stretch;
+}
+
+/* ==========================================
+   REPORT
+========================================== */
+
+.report-section {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.report-section summary {
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.report-section summary:hover {
+    color: var(--red);
+}
+
+.report-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.report-section input,
+.report-section textarea {
+    width: 100%;
+}
+
+.report-section textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    background: var(--green);
+    color: var(--white);
+    padding: 30px 7%;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 125px;
+    height: 65px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 8px;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 850px) {
+
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .navigation {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .form-grid,
+    .search-bar {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 5%;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .header-icons {
+        justify-content: center;
+    }
+
+    .hero {
+        width: 90%;
+        padding: 45px 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .community {
+        width: 92%;
+    }
+
+    .hero {
+        width: 92%;
+        padding: 35px 22px;
+        margin: 25px auto;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .create-post,
+    .post-card {
+        padding: 20px;
+    }
+
+    .posts-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-actions form {
+        width: 100%;
+    }
+
+    .post-actions input,
+    .post-actions button,
+    .comment-form input,
+    .comment-form button {
+        width: 100%;
+    }
+
+    .comment-form {
+        flex-direction: column;
+    }
+
+    .edit-section button,
+    .delete-button {
+        width: 100%;
+    }
+
+    .delete-form input {
+        max-width: 100%;
+    }
+
+}
